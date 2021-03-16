@@ -1,0 +1,6 @@
+.Form
+  = form_with(model: @item, local: true) do |form|
+    = form.text_field :name, placeholder: "商品名", class: "Form__name"
+    = form.file_field :image, placeholder: "写真を選択", class: "Form__image"
+    = collection_check_boxes :item, , collection, value_method, text_method, {}
+    = form.submit "登録", class: "Form__btn"
