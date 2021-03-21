@@ -4,10 +4,17 @@
     display: flex;
     margin: 20px auto;
     text-align: center;
+    position: relative;
   }
   &__image{
     display: flex;
-    margin: 20px auto;
+    margin: 100px auto;
+  }
+  select{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
   }
   &__btn{
     display: flex;

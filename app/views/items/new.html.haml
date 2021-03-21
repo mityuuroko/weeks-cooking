@@ -1,6 +1,6 @@
 .Form
   = form_with(model: @item, local: true) do |form|
     = form.text_field :name, placeholder: "商品名", class: "Form__name"
+    = form.select :menu_id, {"主食":1, "主菜":2, "副菜":3, "豆・乳製品":4, "果物":5},{include_blank: "選択して下さい"}
     = form.file_field :image, placeholder: "写真を選択", class: "Form__image"
-    = collection_check_boxes :item, , collection, value_method, text_method, {}
     = form.submit "登録", class: "Form__btn"
