@@ -1,0 +1,8 @@
+.Content
+  = image_tag 'cook.jpg', alt: 'イメージ画像', class: 'cook-image'
+  %li.Menu 
+    %ul.Menu__create 献立を作成  
+    %ul.Menu__registration
+      = link_to "メニューの登録",new_item_path, class: 'link'
+    %ul.Menu__list
+      = link_to "登録商品一覧",items_path, class: 'link'

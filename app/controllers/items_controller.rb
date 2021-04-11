@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
 
   def index
+    @items = Item.all
   end
 
   def new
@@ -9,6 +10,15 @@ class ItemsController < ApplicationController
 
   def create
     Item.create(item_params)
+  end
+
+  def destory
+    item = Item.find(params[:id])
+    item.destory
+  end
+
+  def show
+    @item = Item.find(params[:id])
   end
 end
 

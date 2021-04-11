@@ -1,7 +1,8 @@
-.Content
-  = image_tag 'cook.jpg', alt: 'イメージ画像', class: 'cook-image'
-  %li.Menu 
-    %ul.Menu__create 献立を作成  
-    %ul.Menu__registration
-      = link_to "メニューの登録",new_item_path, class: 'link'
-    %ul.Menu__list 登録商品一覧
+.List
+  一覧
+  .List__content
+    - @items.each do |item|
+      = item.name
+      = item.menu_id
+      = link_to '詳細', item_path(item.id), method: :get
+      //("主食":1, "主菜":2, "副菜":3, "豆・乳製品":4, "果物":5)
